@@ -5,7 +5,6 @@ import { DateTime } from './module/luxon.js';
 let books = [];
 const bookTitle = document.querySelector('#title');
 const bookAuthor = document.querySelector('#author');
-const addBtn = document.querySelector('#add');
 const form = document.querySelector('#form');
 books = JSON.parse(localStorage.getItem('bookDetail')) || [];
 
