@@ -5,11 +5,12 @@ import { DateTime } from './module/luxon.js';
 let books = [];
 const bookTitle = document.querySelector('#title');
 const bookAuthor = document.querySelector('#author');
-const addBtn = document.querySelector('#add');
+const form = document.querySelector('#form');
 books = JSON.parse(localStorage.getItem('bookDetail')) || [];
+
 renderBooks(books);
 
-addBtn.addEventListener('click', (e) => {
+form.addEventListener('submit', (e) => {
   e.preventDefault();
   const myBook = new Book(bookTitle.value, bookAuthor.value);
   myBook.addBook(books);
